@@ -1,0 +1,163 @@
+
+
+:root {
+    --heading-font: "Playfair Display", serif;
+    --body-font: "Open Sans", sans-serif;
+    --primary-color: #003366;
+    --secondary-color: #0055aa;
+    --light-bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --text-color: #222;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Header Title */
+header h1 {
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+/* Mobile Menu Button */
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+    /* hidden until menu opens */
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: white;
+    background-color: black;
+}
+
+.show li {
+    display: block;
+}
+
+/* Larger screens */
+@media only screen and (min-width: 40em) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        /* reset */
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+main h1 {
+    font-family: var(--heading-font);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+figure {
+    background: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    display: block;
+}
+
+figcaption {
+    padding: 0.5rem;
+    font-style: italic;
+    background: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: #f9f9f9;
+    margin-top: 3rem;
+}
