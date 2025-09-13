@@ -10,7 +10,7 @@
     --text-color: #222;
 }
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
     color: var(--text-color);
 }
 
-/* Header Title */
+
 header h1 {
     font-size: 1rem;
     padding: 1rem;
@@ -34,7 +34,7 @@ header h1 {
     font-family: var(--heading-font);
 }
 
-/* Mobile Menu Button */
+
 #menu {
     display: block;
     font-size: 2rem;
@@ -53,7 +53,7 @@ header h1 {
     content: "X";
 }
 
-/* Navigation */
+
 nav {
     background-color: var(--secondary-color);
 }
@@ -66,7 +66,7 @@ nav {
 
 .navigation li {
     display: none;
-    /* hidden until menu opens */
+    
 }
 
 .navigation a {
@@ -90,7 +90,7 @@ nav {
     display: block;
 }
 
-/* Larger screens */
+
 @media only screen and (min-width: 40em) {
     header h1 {
         font-size: 2rem;
@@ -102,7 +102,7 @@ nav {
 
     .navigation li {
         display: block;
-        /* reset */
+        
         flex: 1 1 100%;
     }
 
@@ -122,7 +122,7 @@ main {
     padding: 1rem;
 }
 
-main h1 {
+main h1, h2 {
     font-family: var(--heading-font);
     margin: 1rem 0;
     text-align: center;
