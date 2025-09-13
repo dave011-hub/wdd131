@@ -2,7 +2,7 @@
 
 
 
-/* Larger screens */
+
 @media (min-width: 48rem) {
     nav ul {
         flex-direction: row;
