@@ -1,2 +1,133 @@
 
 
+
+:root {
+    --font-body: 'Montserrat', Arial, sans-serif;
+    --font-heading: 'MuseoModerno', cursive;
+
+    --red:#E45A92;
+    --green: #344F1F;
+    --white: #E9E294;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: #222;
+    background-color: #fafafa;
+}
+
+/* -------------------------------
+   Header
+--------------------------------*/
+header {
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 6px solid var(--green);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* -------------------------------
+   Hero Section
+--------------------------------*/
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Info boxes */
+.info {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.info h2 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+.info ul {
+    list-style: none;
+}
+
+.info li {
+    margin-bottom: 0.25rem;
+}
+
+/* -------------------------------
+   Weather Box
+--------------------------------*/
+.weather img {
+    width: 40px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.weather h2::after {
+    /* pseudo-element icon for desktop view */
+    content: " ⛅";
+    display: none;
+}
+
+/* -------------------------------
+   Footer
+--------------------------------*/
+footer {
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------
+   Responsive Layout
+--------------------------------*/
+@media (min-width: 700px) {
+    .info.data {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 250px;
+    }
+
+    .info.weather {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        width: 250px;
+    }
+
+    /* Hide mobile weather icon in wide view */
+    .weather img {
+        display: none;
+    }
+
+    /* Show pseudo-element icon in wide view */
+    .weather h2::after {
+        display: inline;
+    }
+}
