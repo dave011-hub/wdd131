@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Country</title>
+    <link rel="stylesheet" href="styles/places.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Libertinus+Mono&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/places.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Place Tiltle</h1>
+    </header>
+    <main>
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><span>Label:</span>Value</li>
+                <li><span>Label:</span>Value</li>
+                <li><span>Label:</span>Value</li>
+                <li><span>Label:</span>Value</li>
+                <li><span>Label:</span>Value</li>
+                <li><span>Label:</span>Value</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="emoji"></span></h2>
+            <ul>
+                <li>Temperature: <span id="temp">45</span>°F</li>
+                <li>Wind Speed: <span id="Wind">10</span>mph</li>
+                <li>Wind Chill: <span id="chill"></span>Vale</li>
+                <img src="" alt="Weather Icon" class="Weather-icon">
+            </ul>
+        </section>
+
+        <section class="images">
+            <img src="images/OIP (2).webp" alt="Our Country colors "
+                srcset="images/OIP(1).webp,images/10-Beautiful-places-To-Visit-ETIC-Hostels.webp,images/R.webp"
+                sizes="(max-width:600px) 100vw,(max-width:1024px) 80vw,70vw" alt="Scenic of Place">
+
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> | David Agbenyegah Bieku | Accra - Ghana | My country
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
