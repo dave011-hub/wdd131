@@ -1,0 +1,181 @@
+
+:root {
+    --heading-font: "Playfair Display", serif;
+    --body-font: "Open Sans", sans-serif;
+    --primary-color: #003366;
+    --secondary-color: #0055aa;
+    --accent-color: #16a085;
+    --light-bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --text-color: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.2rem;
+    font-family: var(--heading-font);
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+
+nav {
+    background-color: var(--secondary-color);
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.3s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.show li {
+    display: block;
+}
+
+@media only screen and (min-width: 40em) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+main h1,
+h2 {
+    font-family: var(--heading-font);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+figure {
+    background: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+}
+
+figure img {
+    width: 100%;
+    display: block;
+}
+
+figcaption {
+    padding: 0.5rem;
+    background: #fff;
+    text-align: left;
+}
+
+figcaption h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+figcaption p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: #f9f9f9;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
