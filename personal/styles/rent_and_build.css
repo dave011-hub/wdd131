@@ -1,0 +1,90 @@
+
+
+
+
+:root {
+    --primary-color: #2E8B57;
+    /* headings, buttons */
+    --secondary-color: #f4f4f4;
+    /* background */
+    --accent1-color: #E6E49F;
+    /* highlights */
+    --accent2-color: #A4A13B;
+    /* emphasis */
+    --font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+p,
+li {
+    font-weight: 400;
+}
+
+
+.color-sample {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+.color-sample.primary {
+    background-color: var(--primary-color);
+}
+
+.color-sample.secondary {
+    background-color: var(--secondary-color);
+    border: 1px solid #999;
+}
+
+.color-sample.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.color-sample.accent2 {
+    background-color: var(--accent2-color);
+}
+
+
+.wireframes figure {
+    display: inline-block;
+    margin: 1rem;
+    text-align: center;
+}
+
+.wireframes img {
+    max-width: 200px;
+    border: 2px solid var(--accent2-color);
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: var(--accent1-color);
+    color: #000;
+}
