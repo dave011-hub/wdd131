@@ -1,6 +1,8 @@
 
 
 
+
+
 :root {
     --primary: #2E8B57;
     --accent1: #E6E49F;
@@ -88,6 +90,9 @@ fieldset {
     background: var(--accent2);
     color: white;
 }
+
+
+
 
 /* Responsive */
 @media (max-width: 600px) {

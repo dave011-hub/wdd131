@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,13 +20,13 @@
     <main>
         <form method="get" action="review.html" class="review-form">
 
-            
+
             <label for="productName">Product Name</label>
             <select id="productName" name="productName" required>
                 <option value="" disabled selected>Select a Product ...</option>
             </select>
 
-            
+
             <fieldset>
                 <legend>Overall Rating</legend>
                 <div class="stars">
@@ -48,11 +47,11 @@
                 </div>
             </fieldset>
 
-            
+
             <label for="installDate">Date of Installation</label>
             <input type="date" id="installDate" name="installDate" required>
 
-            
+
             <fieldset>
                 <legend>Useful Features (check all that apply)</legend>
                 <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
@@ -62,15 +61,15 @@
                     Money</label>
             </fieldset>
 
-            
+
             <label for="writtenReview">Written Review</label>
             <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share your thoughts..."></textarea>
 
-            
+
             <label for="userName">Your Name (optional)</label>
             <input type="text" id="userName" name="userName" placeholder="John Doe">
 
-            
+
             <input type="submit" value="Turn in Review" class="submit-btn">
         </form>
     </main>
